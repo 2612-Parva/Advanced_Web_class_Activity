@@ -10,8 +10,7 @@ This is a simple MERN Stack web application developed as part of the Advanced We
 - Responsive UI using React-Bootstrap
 - GitHub version control
 - Deployment ready for Netlify (frontend)
-- 
-
+  
 ## Technologies Used
 
 - **Frontend:** React with Vite, React-Bootstrap  
