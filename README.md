@@ -43,3 +43,5 @@ Base directory: ProdManag
 Build command: npm run build
 
 Publish directory: dist
+
+Netlify Project Link: https://app.netlify.com/projects/2classactivit/deploys/683a6595327b7426e2f3d4a2
