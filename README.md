@@ -25,7 +25,7 @@ This is a simple MERN Stack web application developed as part of the Advanced We
 ### 1. Clone the Repository
 
 bash
-git clone https://github.com/2612-Parva/Advanced-Web-class-activity-2.git
+git clone https://github.com/2612-Parva/Advanced_Web_class_activity_2.git
 cd ProdManag
 
 ### 2. Setup Frontend
