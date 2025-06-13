@@ -24,7 +24,7 @@ cd frontend
 npm install
 npm run dev
 
-### 3. Deployment
+### Deployment
 
 Netlify Settings:
 
