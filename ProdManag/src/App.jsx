@@ -7,6 +7,7 @@ import Home from "./pages/Home/Home";
 import Product from "./pages/Product/Product";
 import Contact from "./pages/Contact/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Signup from "./pages/Auths/Signup";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
         <Route path="/" element={<Home/>}></Route>
          <Route path="/product" element={<Product/>} />
          <Route path="/contact" element={<Contact/>}/>
+         <Route path="/signup" element={<Signup/>}/>
+
 
       </Routes>
     </Router>
