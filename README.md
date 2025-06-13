@@ -1,12 +1,12 @@
-# MERN Stack Project – Advanced Web Development Class Activity - 2
+# MERN Stack Project – Advanced Web Development Class Activity
 
-This is a simple MERN Stack web application developed as part of the Advanced Web Development course Class Activity 2.
+This is a simple MERN Stack web application developed as part of the Advanced Web Development course Class Activity
 
 
 ## Features
 
 - React frontend built with Vite
-- Basic product management (Add/View products)
+- Basic product management
 - Responsive UI using React-Bootstrap
 - GitHub version control
 - Deployment ready for Netlify (frontend)
@@ -18,16 +18,7 @@ This is a simple MERN Stack web application developed as part of the Advanced We
 - **Deployment:** Netlify (frontend)
 - **IDE:** VS Code  
 
-
-## Getting Started
-
-### 1. Clone the Repository
-
-bash
-git clone https://github.com/2612-Parva/Advanced_Web_class_activity_2.git
-cd ProdManag
-
-### 2. Setup Frontend
+## Setup Frontend
 
 cd frontend
 npm install
