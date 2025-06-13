@@ -1,12 +1,50 @@
-# React + Vite
+# MERN Stack Project – Advanced Web Development Class Activity - 2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple MERN Stack web application developed as part of the Advanced Web Development course Class Activity 2.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- React frontend built with Vite
+- Basic product management (Add/View products)
+- Responsive UI using React-Bootstrap
+- GitHub version control
+- Deployment ready for Netlify (frontend)
+- 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+- **Frontend:** React with Vite, React-Bootstrap  
+- **Version Control:** Git & GitHub  
+- **Deployment:** Netlify (frontend)
+- **IDE:** VS Code  
+
+
+## Getting Started
+
+### 1. Clone the Repository
+
+bash
+git clone https://github.com/2612-Parva/Advanced-Web-class-activity-2.git
+cd ProdManag
+
+### 2. Setup Frontend
+
+cd frontend
+npm install
+npm run dev
+
+### 3. Deployment
+
+Netlify Settings:
+
+Base directory: ProdManag
+
+Build command: npm run build
+
+Publish directory: dist
+
+Netlify Project Link: https://app.netlify.com/projects/2classactivit/deploys/683a6595327b7426e2f3d4a2
+
+
+
