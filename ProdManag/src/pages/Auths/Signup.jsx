@@ -1,9 +1,13 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import logo from '/src/assets/logo.png';
 
 const Signup = () => {
+  const navigate = useNavigate();
+
   const SignupSchema = Yup.object().shape({
     fullname: Yup.string().required('Fullname is required'),
     email: Yup.string().email('Invalid email').required('Email is required'),
@@ -18,6 +22,25 @@ const Signup = () => {
       .required('Confirm your password'),
   });
 
+  const handleSubmit = async (values, { setSubmitting, resetForm }) => {
+    try {
+      const response = await axios.post('http://localhost:5000/api/auth/register', {
+        name: values.fullname,
+        email: values.email,
+        password: values.password
+      });
+      
+      localStorage.setItem('token', response.data.token);
+      alert('Registration successful!');
+      navigate('/login'); 
+    } catch (error) {
+      alert(error.response?.data?.msg || 'Registration failed');
+    } finally {
+      setSubmitting(false);
+      resetForm();
+    }
+  };
+
   return (
     <div className="container d-flex justify-content-center align-items-center" style={{ minHeight: '100vh', backgroundColor: '#f8f9fa' }}>
       <div className="bg-white p-4 rounded shadow-lg" style={{ 
@@ -26,15 +49,11 @@ const Signup = () => {
         boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
       }}>
         <div className="text-center mb-4">
-          <img
-            className="logo"
-            src={logo}
-            alt="logo"
-            style={{ width: "120px" }}
-          />
+          <img src={logo} alt="logo" style={{ width: "120px" }} />
           <h3 className="mt-3" style={{ color: '#343a40' }}>Sign Up</h3>
           <p className="text-muted">Create your account</p>
         </div>
+        
         <Formik
           initialValues={{
             fullname: '',
@@ -44,10 +63,7 @@ const Signup = () => {
             confirmPassword: '',
           }}
           validationSchema={SignupSchema}
-          onSubmit={(values, { resetForm }) => {
-            console.log('Form values', values);
-            resetForm();
-          }}
+          onSubmit={handleSubmit}
         >
           {({ isSubmitting }) => (
             <Form>
@@ -141,6 +157,10 @@ const Signup = () => {
             </Form>
           )}
         </Formik>
+
+        <div className="text-center mt-3">
+          <p>Already have an account? <a href="/login">Login</a></p>
+        </div>
       </div>
     </div>
   );
